@@ -1,14 +1,5 @@
 import React from "react";
-
-interface IconListType {
-  [key: string]: {
-    title: string;
-    path: JSX.Element;
-    url;
-    color: string;
-    viewBox?: string;
-  };
-}
+import { IconListType } from 'interfaces';
 
 export const iconList: IconListType = {
   facebook: {

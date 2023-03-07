@@ -12,7 +12,7 @@ const ShareOnSocial = ({
   closeText = "Close",
   copyToClipboardText = "Copy link",
   copySuccessText = "Copied",
-  shareTo = Object.keys(iconList),
+  shareTo = iconList,
   textToShare,
   link,
   linkTitle,

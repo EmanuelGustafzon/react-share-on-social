@@ -38,9 +38,10 @@ export default function Popup({
     <section role="dialog" aria-modal="true" className={fadeClass} style={SocialButtonsContainer}>
       <Header shareData={shareData} />
       <div style={SocialButtonsListStyle}>
-        {shareTo.map((id) => (
+        {Object.entries(shareTo).map(([id, social]) => (
           <SocialButton
             id={id}
+            social={social}
             key={id}
             shareData={shareData}
             onClose={onClose}

@@ -1,10 +1,10 @@
 import { IconProps } from "interfaces";
 import React, { useState } from "react";
 
-import { iconList, windowFeatures } from "../config";
+import { windowFeatures } from "../config";
 
-export default function Icon({ id, shareData, onClose, onClick, noReferer }: IconProps) {
-  const { title, path, viewBox = "0 0 24 24", color, url } = iconList[id];
+export default function Icon({ id, shareData, onClose, onClick, noReferer, social }: IconProps) {
+  const { title, path, viewBox = "0 0 24 24", color, url } = social;
   const [hover, setHover] = useState<boolean | null>(null);
 
   const handleOnButtonClicked = () => {

@@ -4,7 +4,7 @@ export interface ShareOnSocialProps {
   closeText?: string;
   copyToClipboardText?: string;
   copySuccessText?: string;
-  shareTo: Array<string>;
+  shareTo: IconListType;
   textToShare: string;
   link: string;
   linkTitle: string;
@@ -28,7 +28,7 @@ export interface PopupProps {
   closeText?: string;
   copyToClipboardText?: string;
   copySuccessText?: string;
-  shareTo: Array<string>;
+  shareTo: IconListType
   shareData: ShareData;
   onClick?;
   openInWindow?: boolean;
@@ -41,6 +41,17 @@ export interface IconProps {
   id: string;
   shareData: ShareData;
   onClick?;
+  social: IconListType[string],
   openInWindow?: boolean;
   noReferer?: boolean;
+}
+
+export interface IconListType {
+  [key: string]: {
+    title: string;
+    path: JSX.Element;
+    url: (link: string, description: string, title: string) => string;
+    color: string;
+    viewBox?: string;
+  };
 }
